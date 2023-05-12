@@ -5,24 +5,27 @@
 //  Created by Rabiga on 06.05.2023.
 //
 
+
 import UIKit
+import WebKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate {
     var nightStyle = false
     @IBOutlet weak var firstV: UIStackView!
     @IBOutlet weak var secondV: UIStackView!
     @IBOutlet weak var thirdV: UIStackView!
     @IBOutlet weak var forthV: UIStackView!
     @IBOutlet weak var mainView: UIView!
+    
     @IBOutlet weak var switchStyle: UISwitch!
     var pos: Int = 0
     var listOfStacks: [UIStackView] = []
     
     // Initializer
     override func viewDidLoad() {
-        
         listOfStacks = [self.firstV, self.secondV, self.thirdV, self.forthV]
+
     }
     
     @IBAction func switchStyleLogic(_ sender: UISwitch)
@@ -44,5 +47,19 @@ class ViewController: UIViewController {
     }
     
 
+    @IBAction func addLogic(_ sender: Any) {
+        addWebView()
+    }
+    @objc func addWebView() {
+        var webView = WKWebView()
+        webView.navigationDelegate = self
+        
+        listOfStacks[pos].addArrangedSubview(webView)
+        pos += 1
+        pos %= 4
+
+        let url = URL(string: "https://www.hackingwithswift.com")!
+        webView.load(URLRequest(url: url))
+    }
 }
 
