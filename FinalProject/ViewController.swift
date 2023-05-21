@@ -31,11 +31,11 @@ class ViewController: UIViewController {
     }
     
 
-    
+    // Add New View(Card) in Stack
     @IBAction func addView(_ sender: Any) {
         let colors = [UIColor.black, UIColor.brown, UIColor.red, UIColor.blue]
 
-        
+        // Create Object of View
         let viewDemo = UIView()
         viewDemo.frame = CGRect(x: 10, y: 10 + 50 * (m - 1), width: 50, height: 100)
         viewDemo.backgroundColor = colors[Int.random(in: 0..<4)]
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         
         listOfStacks[pos].addArrangedSubview(viewDemo)
         
-        
+        // Logic for Spaces in Stacks
         if(spaces.count != 0){
             spaces[0].removeFromSuperview()
             spaces.remove(at: 0)
@@ -62,8 +62,6 @@ class ViewController: UIViewController {
                 spaces.append(space)
             }
         }
-        
-        
         
         pos += 1
         pos %= 4
