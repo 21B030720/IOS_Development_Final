@@ -30,36 +30,7 @@ class ViewController: UIViewController {
         
     }
     
-//    @IBAction func switchStyleLogic(_ sender: UISwitch)
-//    {
-//        // Standart properties of mainView
-//        self.mainView.layer.borderColor = UIColor(red: 0.8457908898, green: 0.1717290428, blue: 1, alpha: 1).cgColor
-//        self.mainView.layer.borderWidth = 5
-//        self.mainView.bounds = view.frame.insetBy(dx: 10.0, dy: 10.0)
-//
-//        // Logic of Switch
-//        if (sender.isOn)
-//        {
-//            self.mainView.backgroundColor = UIColor(red: 0.8457908898, green: 0.1717290428, blue: 1, alpha: 1)
-//        }
-//        else
-//        {
-//            self.mainView.backgroundColor = UIColor(#colorLiteral(red: 0.6898682781, green: 0.6429276373, blue: 0.9222203677, alpha: 0.8470588235))
-//        }
-//    }
-    
 
-//    @IBAction func addLogic(_ sender: Any) {
-//        let button = UIButton()
-//        button.setTitle("Button Ars", for: .normal)
-//        button.backgroundColor = .red
-//        firstV.addArrangedSubview(button)
-//        pos += 1
-//        pos %= 4
-
-//        print("Hellow")
-//        print(pos)
-//    }
     
     @IBAction func addView(_ sender: Any) {
         let colors = [UIColor.black, UIColor.brown, UIColor.red, UIColor.blue]
@@ -94,11 +65,6 @@ class ViewController: UIViewController {
         
         
         
-//        vStack.addArrangedSubview(viewDemo)
-//        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapEventDetected(gesture:)))
-//        viewDemo.addGestureRecognizer(gesture)
-        
-//        listOfStacks[pos].addArrangedSubview(label)
         pos += 1
         pos %= 4
     }
