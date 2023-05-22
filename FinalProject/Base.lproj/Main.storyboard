@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="El1-fI-5rA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -11,38 +11,27 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dbb-Sl-IJB">
-                                <rect key="frame" x="0.0" y="74" width="414" height="788"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbb-Sl-IJB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b6z-Bm-Udy">
-                                        <rect key="frame" x="-1" y="0.0" width="415" height="200"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="moL-WK-Fw6">
-                                                <rect key="frame" x="0.0" y="0.0" width="96.5" height="200"/>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZmM-Iu-ET9">
-                                                <rect key="frame" x="106.5" y="0.0" width="96" height="200"/>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IPE-3H-9Sp">
-                                                <rect key="frame" x="212.5" y="0.0" width="96.5" height="200"/>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AN5-Af-KNV">
-                                                <rect key="frame" x="319" y="0.0" width="96" height="200"/>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fk4-CB-dZ3">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="b6z-Bm-Udy" firstAttribute="width" secondItem="Dbb-Sl-IJB" secondAttribute="width" constant="1" id="AhH-Sl-JNx"/>
-                                    <constraint firstAttribute="bottom" secondItem="b6z-Bm-Udy" secondAttribute="bottom" id="NzD-bK-AgK"/>
-                                    <constraint firstItem="b6z-Bm-Udy" firstAttribute="top" secondItem="Dbb-Sl-IJB" secondAttribute="top" id="ikZ-s8-hCL"/>
-                                    <constraint firstItem="b6z-Bm-Udy" firstAttribute="leading" secondItem="Dbb-Sl-IJB" secondAttribute="leading" id="sVK-6q-aaj"/>
-                                    <constraint firstAttribute="trailing" secondItem="b6z-Bm-Udy" secondAttribute="trailing" id="xPt-B0-02p"/>
+                                    <constraint firstAttribute="bottom" secondItem="fk4-CB-dZ3" secondAttribute="bottom" id="COO-fa-pQY"/>
+                                    <constraint firstItem="fk4-CB-dZ3" firstAttribute="centerX" secondItem="Dbb-Sl-IJB" secondAttribute="centerX" id="ElL-8Q-00T"/>
+                                    <constraint firstItem="fk4-CB-dZ3" firstAttribute="leading" secondItem="Dbb-Sl-IJB" secondAttribute="leading" id="JcP-Rs-hoP"/>
+                                    <constraint firstAttribute="trailing" secondItem="fk4-CB-dZ3" secondAttribute="trailing" id="UVn-9W-9Qk"/>
+                                    <constraint firstItem="fk4-CB-dZ3" firstAttribute="top" secondItem="Dbb-Sl-IJB" secondAttribute="top" id="hNc-fh-aeV"/>
+                                    <constraint firstItem="fk4-CB-dZ3" firstAttribute="centerY" secondItem="Dbb-Sl-IJB" secondAttribute="centerY" id="tMP-TE-XsD"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCo-8n-sVn">
@@ -61,18 +50,47 @@
                             <constraint firstItem="Dbb-Sl-IJB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0xp-jc-RMn"/>
                             <constraint firstItem="Dbb-Sl-IJB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2zv-Vn-3Rd"/>
                             <constraint firstItem="Dbb-Sl-IJB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bvk-Eg-e1a"/>
-                            <constraint firstItem="Dbb-Sl-IJB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="jnS-vb-rY4"/>
+                            <constraint firstItem="Dbb-Sl-IJB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jnS-vb-rY4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ZMC-gg-ReQ"/>
                     <connections>
-                        <outlet property="firstV" destination="moL-WK-Fw6" id="cDK-JR-NIx"/>
-                        <outlet property="fourthView" destination="AN5-Af-KNV" id="GYg-u5-vZZ"/>
-                        <outlet property="mainView" destination="8bC-Xf-vdC" id="gPL-Vg-Kiz"/>
-                        <outlet property="secondV" destination="ZmM-Iu-ET9" id="DMq-Bh-kWO"/>
-                        <outlet property="thirdView" destination="IPE-3H-9Sp" id="EDp-Ji-WVq"/>
+                        <outlet property="table" destination="fk4-CB-dZ3" id="TJ4-sv-Qis"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="97.767857142857139"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="Qd9-9v-j1N">
+            <objects>
+                <viewController id="yl8-lM-my9" customClass="GameViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dyt-Jf-Dj7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gYW-Id-nIL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hG0-Tf-cQP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771" y="71"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q8P-k2-bLf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="El1-fI-5rA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VNa-EX-1oM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dba-UN-oPT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAa-uH-ApH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
         </scene>

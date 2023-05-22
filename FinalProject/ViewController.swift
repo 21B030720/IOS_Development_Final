@@ -1,70 +1,47 @@
 //
 //  ViewController.swift
-//  FinalProject
+//  column
 //
-//  Created by Rabiga on 06.05.2023.
+//  Created by Rabiga on 20.05.2023.
 //
-
 
 import UIKit
-import WebKit
 
+class ViewController: UIViewController, UITableViewDataSource {
+    // Data and main objects
+    let data = ["First", "Second"]
+    @IBOutlet weak var table: UITableView!
 
-class ViewController: UIViewController {
-    
-    @IBOutlet var mainView: UIView!
-    @IBOutlet weak var firstV: UIStackView!
-    @IBOutlet weak var thirdView: UIStackView!
-    @IBOutlet weak var fourthView: UIStackView!
-    @IBOutlet weak var secondV: UIStackView!
-    @IBOutlet weak var mainStack: UIStackView!
-    @IBOutlet weak var vStack: UIStackView!
-    var listOfStacks: [UIStackView] = []
-    var spaces: [UIView] = []
-    var pos: Int = 0
-    var m: Int = 1
     
     // Initializer
     override func viewDidLoad() {
-        listOfStacks = [firstV, secondV, thirdView, fourthView]
-        
+        title = "List"
+        super.viewDidLoad()
+        table.register(MyTableViewCell.nib(), forCellReuseIdentifier: MyTableViewCell.identifier)
+        table.dataSource = self
     }
     
+    // logic for tableView
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return data.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MyTableViewCell.identifier, for: indexPath) as! MyTableViewCell
+        cell.configure(with: data[indexPath.row])
+        cell.delegate = self
+//        cell.textLabel?.text = data[indexPath.row]
+        return cell
+    }
+}
 
-    // Add New View(Card) in Stack
-    @IBAction func addView(_ sender: Any) {
-        let colors = [UIColor.black, UIColor.brown, UIColor.red, UIColor.blue]
+extension ViewController: MyTableViewCellDelegate{
+    func didTapButton(with title: String) {
+        let rootController = GameViewController()
+//        let navController = UINavigationController(rootViewController: rootController)
+//        present(navController, animated: true)
+        navigationController?.pushViewController(rootController, animated: true)
 
-        // Create Object of View
-        let viewDemo = UIView()
-        viewDemo.frame = CGRect(x: 10, y: 10 + 50 * (m - 1), width: 50, height: 100)
-        viewDemo.backgroundColor = colors[Int.random(in: 0..<4)]
-        viewDemo.layer.cornerRadius = 5;
-        viewDemo.layer.masksToBounds = true;
-        viewDemo.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        
-        listOfStacks[pos].addArrangedSubview(viewDemo)
-        
-        // Logic for Spaces in Stacks
-        if(spaces.count != 0){
-            spaces[0].removeFromSuperview()
-            spaces.remove(at: 0)
-        }
-        
-        if(pos == 0){
-            for i in 1...3{
-                let space = UIView()
-                space.frame = CGRect(x: 10, y: 10 + 50 * (m - 1), width: 50, height: 100)
-                space.backgroundColor = UIColor.white
-                space.heightAnchor.constraint(equalToConstant: 100).isActive = true
-                
-                listOfStacks[i].addArrangedSubview(space)
-                spaces.append(space)
-            }
-        }
-        
-        pos += 1
-        pos %= 4
     }
 }
 
