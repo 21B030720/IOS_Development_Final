@@ -11,7 +11,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     // Data and main objects
     let data = ["First", "Second"]
     @IBOutlet weak var table: UITableView!
-
+    var pointer: String = ""
+//    let userDefaults = UserDefaults()
     
     // Initializer
     override func viewDidLoad() {
@@ -22,22 +23,27 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     // logic for tableView
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return data.count
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MyTableViewCell.identifier, for: indexPath) as! MyTableViewCell
         cell.configure(with: data[indexPath.row])
         cell.delegate = self
-//        cell.textLabel?.text = data[indexPath.row]
         return cell
     }
+    
 }
+
 
 extension ViewController: MyTableViewCellDelegate{
     func didTapButton(with title: String) {
-        let rootController = GameViewController()
+        pointer = title
+        print(pointer, "All")
+        let rootController = GameController()
+        rootController.load(loading: getCards(name: pointer))
+        rootController.title = pointer
 //        let navController = UINavigationController(rootViewController: rootController)
 //        present(navController, animated: true)
         navigationController?.pushViewController(rootController, animated: true)

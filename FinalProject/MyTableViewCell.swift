@@ -10,9 +10,12 @@ import UIKit
 protocol MyTableViewCellDelegate: AnyObject{
     func didTapButton(with title: String)
 }
+
+
 class MyTableViewCell: UITableViewCell{
     weak var delegate: MyTableViewCellDelegate?
     static let identifier = "MyTableViewCell"
+    private var title: String = ""
     
     static func nib()->UINib{
         return UINib(nibName: "MyTableViewCell", bundle: nil)
@@ -20,8 +23,9 @@ class MyTableViewCell: UITableViewCell{
     
     
     @IBOutlet var button: UIButton!
-    private var title: String = ""
+    
     @IBAction func didTapButton(){
+        
         delegate?.didTapButton(with: title)
     }
     
@@ -35,10 +39,7 @@ class MyTableViewCell: UITableViewCell{
         button .setTitleColor(.link, for: .normal)
     }
 
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
     
 }
+
+

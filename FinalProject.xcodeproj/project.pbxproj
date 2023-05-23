@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		71527E222A1B860D0074F4E3 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71527E202A1B860D0074F4E3 /* MyTableViewCell.swift */; };
 		71527E232A1B860D0074F4E3 /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71527E212A1B860D0074F4E3 /* MyTableViewCell.xib */; };
-		71527E262A1B8D200074F4E3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71527E242A1B8D200074F4E3 /* GameViewController.swift */; };
-		71527E272A1B8D200074F4E3 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71527E252A1B8D200074F4E3 /* GameViewController.xib */; };
+		71527E292A1B9C610074F4E3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71527E282A1B9C610074F4E3 /* Model.swift */; };
+		717030942A1CE2BD005ADB7E /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717030922A1CE2BD005ADB7E /* GameController.swift */; };
+		717030952A1CE2BD005ADB7E /* GameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 717030932A1CE2BD005ADB7E /* GameController.xib */; };
+		717030982A1CF854005ADB7E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717030962A1CF853005ADB7E /* GameViewController.swift */; };
+		717030992A1CF854005ADB7E /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 717030972A1CF853005ADB7E /* GameViewController.xib */; };
 		717708912A092E020029D55F /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717708902A092E020029D55F /* Property.swift */; };
 		717708932A0934A20029D55F /* What_we_should_do.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717708922A0934A20029D55F /* What_we_should_do.swift */; };
 		71CA86B02A062C8200C57F1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CA86AF2A062C8200C57F1E /* AppDelegate.swift */; };
@@ -44,8 +47,11 @@
 /* Begin PBXFileReference section */
 		71527E202A1B860D0074F4E3 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		71527E212A1B860D0074F4E3 /* MyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
-		71527E242A1B8D200074F4E3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		71527E252A1B8D200074F4E3 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		71527E282A1B9C610074F4E3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		717030922A1CE2BD005ADB7E /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		717030932A1CE2BD005ADB7E /* GameController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameController.xib; sourceTree = "<group>"; };
+		717030962A1CF853005ADB7E /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = ../../../../GameViewController.swift; sourceTree = "<group>"; };
+		717030972A1CF853005ADB7E /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GameViewController.xib; path = ../../../../GameViewController.xib; sourceTree = "<group>"; };
 		717708902A092E020029D55F /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		717708922A0934A20029D55F /* What_we_should_do.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_we_should_do.swift; sourceTree = "<group>"; };
 		71CA86AC2A062C8200C57F1E /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,19 +117,22 @@
 		71CA86AE2A062C8200C57F1E /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
+				71CA86BD2A062C8A00C57F1E /* Info.plist */,
 				71CA86AF2A062C8200C57F1E /* AppDelegate.swift */,
 				71CA86B12A062C8200C57F1E /* SceneDelegate.swift */,
 				71CA86B32A062C8200C57F1E /* ViewController.swift */,
 				71CA86B52A062C8200C57F1E /* Main.storyboard */,
-				71CA86B82A062C8A00C57F1E /* Assets.xcassets */,
-				71CA86BA2A062C8A00C57F1E /* LaunchScreen.storyboard */,
-				71CA86BD2A062C8A00C57F1E /* Info.plist */,
-				717708902A092E020029D55F /* Property.swift */,
-				717708922A0934A20029D55F /* What_we_should_do.swift */,
 				71527E202A1B860D0074F4E3 /* MyTableViewCell.swift */,
 				71527E212A1B860D0074F4E3 /* MyTableViewCell.xib */,
-				71527E242A1B8D200074F4E3 /* GameViewController.swift */,
-				71527E252A1B8D200074F4E3 /* GameViewController.xib */,
+				717030962A1CF853005ADB7E /* GameViewController.swift */,
+				717030972A1CF853005ADB7E /* GameViewController.xib */,
+				717030922A1CE2BD005ADB7E /* GameController.swift */,
+				717030932A1CE2BD005ADB7E /* GameController.xib */,
+				71527E282A1B9C610074F4E3 /* Model.swift */,
+				71CA86BA2A062C8A00C57F1E /* LaunchScreen.storyboard */,
+				71CA86B82A062C8A00C57F1E /* Assets.xcassets */,
+				717708902A092E020029D55F /* Property.swift */,
+				717708922A0934A20029D55F /* What_we_should_do.swift */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -250,10 +259,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				71527E232A1B860D0074F4E3 /* MyTableViewCell.xib in Resources */,
+				717030992A1CF854005ADB7E /* GameViewController.xib in Resources */,
 				71CA86BC2A062C8A00C57F1E /* LaunchScreen.storyboard in Resources */,
 				71CA86B92A062C8A00C57F1E /* Assets.xcassets in Resources */,
 				71CA86B72A062C8200C57F1E /* Main.storyboard in Resources */,
-				71527E272A1B8D200074F4E3 /* GameViewController.xib in Resources */,
+				717030952A1CE2BD005ADB7E /* GameController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,13 +288,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71527E262A1B8D200074F4E3 /* GameViewController.swift in Sources */,
 				71527E222A1B860D0074F4E3 /* MyTableViewCell.swift in Sources */,
 				717708932A0934A20029D55F /* What_we_should_do.swift in Sources */,
 				71CA86B42A062C8200C57F1E /* ViewController.swift in Sources */,
+				717030942A1CE2BD005ADB7E /* GameController.swift in Sources */,
 				71CA86B02A062C8200C57F1E /* AppDelegate.swift in Sources */,
 				717708912A092E020029D55F /* Property.swift in Sources */,
+				717030982A1CF854005ADB7E /* GameViewController.swift in Sources */,
 				71CA86B22A062C8200C57F1E /* SceneDelegate.swift in Sources */,
+				71527E292A1B9C610074F4E3 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,7 +481,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,7 +510,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
