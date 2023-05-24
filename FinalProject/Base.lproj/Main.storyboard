@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbb-Sl-IJB">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="734"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fk4-CB-dZ3">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -33,11 +33,25 @@
                                     <constraint firstItem="fk4-CB-dZ3" firstAttribute="centerY" secondItem="Dbb-Sl-IJB" secondAttribute="centerY" id="tMP-TE-XsD"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCo-8n-sVn">
-                                <rect key="frame" x="327" y="35" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N0a-qr-cNN">
+                                <rect key="frame" x="344" y="86" width="58" height="38"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Edit">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="editMode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rEt-Ak-R5x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dr6-EM-8ip">
+                                <rect key="frame" x="20" y="67" width="49" height="62"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="40"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addCell:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X45-em-gyI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -45,8 +59,16 @@
                         <constraints>
                             <constraint firstItem="Dbb-Sl-IJB" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0xp-jc-RMn"/>
                             <constraint firstItem="Dbb-Sl-IJB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2zv-Vn-3Rd"/>
+                            <constraint firstItem="Dbb-Sl-IJB" firstAttribute="top" secondItem="N0a-qr-cNN" secondAttribute="bottom" constant="4" id="Cvy-Za-sWP"/>
+                            <constraint firstItem="N0a-qr-cNN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="86" id="Zhz-AN-n3s"/>
                             <constraint firstItem="Dbb-Sl-IJB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bvk-Eg-e1a"/>
-                            <constraint firstItem="Dbb-Sl-IJB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jnS-vb-rY4"/>
+                            <constraint firstItem="dr6-EM-8ip" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gYs-7o-9MB"/>
+                            <constraint firstItem="N0a-qr-cNN" firstAttribute="leading" secondItem="dr6-EM-8ip" secondAttribute="trailing" constant="275" id="hUq-s0-AX5"/>
+                            <constraint firstItem="N0a-qr-cNN" firstAttribute="leading" secondItem="dr6-EM-8ip" secondAttribute="trailing" constant="275" id="hbr-LW-BwX"/>
+                            <constraint firstItem="Dbb-Sl-IJB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="jnS-vb-rY4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N0a-qr-cNN" secondAttribute="trailing" constant="12" id="lpN-ke-Yh0"/>
+                            <constraint firstItem="dr6-EM-8ip" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="67" id="qJf-AJ-FO8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dr6-EM-8ip" secondAttribute="bottom" constant="733" id="yjR-1C-2Ed"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZMC-gg-ReQ"/>
