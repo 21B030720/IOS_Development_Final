@@ -28,7 +28,7 @@ class Card: UIView {
         configureView()
     }
     private func configureView(){
-        guard let view = self.loadViewFromNib(nibName: "CardView2") else {return}
+        guard let view = self.loadViewFromNib(nibName: "Card") else {return}
         view.frame = self.bounds
         mainView = view
         self.addSubview(view)
@@ -62,6 +62,13 @@ class Card: UIView {
 //        self.button.backgroundColor = color
     }
     @IBAction func flip(_ sender: Any){
+//        if(comparisonCards.count == 0){
+//            comparisonCards.append(self.mainView)
+//        }
+//        else if(comparisonCards.count == 1){
+//            comparisonCards.append
+//        }
+//        if()
         print("Flip")
         if(isFlipside){
             UIButton.animate(withDuration: 1, animations: { [self] in

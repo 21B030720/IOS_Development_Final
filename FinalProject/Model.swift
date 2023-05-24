@@ -9,7 +9,10 @@ import Foundation
 import UIKit
 
 
-var comparison: [UIView] = []
+var comparisonCards: [UIView] = []
+var allCards: [UIView] = []
+func blockAllCards(){
+}
 
 
 func getCards2(name: String)->[Int]{

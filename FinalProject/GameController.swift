@@ -21,6 +21,7 @@ class GameController: UIViewController {
     var m: Int = 1
     override func viewDidLoad() {
         super.viewDidLoad()
+        allCards = []
         listOfStacks = [firstV, secondV, thirdV, forthV]
         load2()
     }
@@ -32,9 +33,11 @@ class GameController: UIViewController {
     func load2(){
         print(loadedData.count)
         for address in loadedData{
-            let viewDemo = CardView2(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+            let viewDemo = Card(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
             viewDemo.configureView(id: address[0], id2: address[1])
             viewDemo.heightAnchor.constraint(equalToConstant: 100).isActive = true
+            
+            allCards.append(viewDemo)
             listOfStacks[pos].addArrangedSubview(viewDemo)
             pos += 1
             pos %= 4
@@ -63,6 +66,7 @@ class GameController: UIViewController {
         viewDemo.configureView(id: address1, id2: address2)
         viewDemo.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
+        allCards.append(viewDemo)
         listOfStacks[pos].addArrangedSubview(viewDemo)
         addCard(name: title!, colorId: address1, emojiId: address2)
         
