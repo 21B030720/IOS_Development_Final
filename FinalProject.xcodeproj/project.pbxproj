@@ -12,10 +12,15 @@
 		71527E292A1B9C610074F4E3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71527E282A1B9C610074F4E3 /* Model.swift */; };
 		717030942A1CE2BD005ADB7E /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717030922A1CE2BD005ADB7E /* GameController.swift */; };
 		717030952A1CE2BD005ADB7E /* GameController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 717030932A1CE2BD005ADB7E /* GameController.xib */; };
-		717030982A1CF854005ADB7E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717030962A1CF853005ADB7E /* GameViewController.swift */; };
-		717030992A1CF854005ADB7E /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 717030972A1CF853005ADB7E /* GameViewController.xib */; };
 		717708912A092E020029D55F /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717708902A092E020029D55F /* Property.swift */; };
 		717708932A0934A20029D55F /* What_we_should_do.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717708922A0934A20029D55F /* What_we_should_do.swift */; };
+		717B947B2A1D693100580067 /* CardView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717B94792A1D693000580067 /* CardView2.swift */; };
+		717B947C2A1D693100580067 /* CardView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 717B947A2A1D693100580067 /* CardView2.xib */; };
+		717B947E2A1D847E00580067 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717B947D2A1D847E00580067 /* Card.swift */; };
+		717B94802A1D849300580067 /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = 717B947F2A1D849300580067 /* Card.xib */; };
+		718286C02A1D0AF400A81EC6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718286BF2A1D0AF400A81EC6 /* CardView.swift */; };
+		718286C42A1D0BD800A81EC6 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 718286C32A1D0BD800A81EC6 /* CardView.xib */; };
+		7182870A2A1D5BC700A81EC6 /* UIViewExtension2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718287092A1D5BC700A81EC6 /* UIViewExtension2.swift */; };
 		71CA86B02A062C8200C57F1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CA86AF2A062C8200C57F1E /* AppDelegate.swift */; };
 		71CA86B22A062C8200C57F1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CA86B12A062C8200C57F1E /* SceneDelegate.swift */; };
 		71CA86B42A062C8200C57F1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CA86B32A062C8200C57F1E /* ViewController.swift */; };
@@ -50,10 +55,15 @@
 		71527E282A1B9C610074F4E3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		717030922A1CE2BD005ADB7E /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		717030932A1CE2BD005ADB7E /* GameController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameController.xib; sourceTree = "<group>"; };
-		717030962A1CF853005ADB7E /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = ../../../../GameViewController.swift; sourceTree = "<group>"; };
-		717030972A1CF853005ADB7E /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GameViewController.xib; path = ../../../../GameViewController.xib; sourceTree = "<group>"; };
 		717708902A092E020029D55F /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
 		717708922A0934A20029D55F /* What_we_should_do.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_we_should_do.swift; sourceTree = "<group>"; };
+		717B94792A1D693000580067 /* CardView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView2.swift; path = ../../Card/Card/CardView2.swift; sourceTree = "<group>"; };
+		717B947A2A1D693100580067 /* CardView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CardView2.xib; path = ../../Card/Card/CardView2.xib; sourceTree = "<group>"; };
+		717B947D2A1D847E00580067 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		717B947F2A1D849300580067 /* Card.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Card.xib; sourceTree = "<group>"; };
+		718286BF2A1D0AF400A81EC6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		718286C32A1D0BD800A81EC6 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		718287092A1D5BC700A81EC6 /* UIViewExtension2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension2.swift; sourceTree = "<group>"; };
 		71CA86AC2A062C8200C57F1E /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CA86AF2A062C8200C57F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71CA86B12A062C8200C57F1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,15 +134,20 @@
 				71CA86B52A062C8200C57F1E /* Main.storyboard */,
 				71527E202A1B860D0074F4E3 /* MyTableViewCell.swift */,
 				71527E212A1B860D0074F4E3 /* MyTableViewCell.xib */,
-				717030962A1CF853005ADB7E /* GameViewController.swift */,
-				717030972A1CF853005ADB7E /* GameViewController.xib */,
 				717030922A1CE2BD005ADB7E /* GameController.swift */,
 				717030932A1CE2BD005ADB7E /* GameController.xib */,
 				71527E282A1B9C610074F4E3 /* Model.swift */,
+				717B947D2A1D847E00580067 /* Card.swift */,
+				717B947F2A1D849300580067 /* Card.xib */,
 				71CA86BA2A062C8A00C57F1E /* LaunchScreen.storyboard */,
 				71CA86B82A062C8A00C57F1E /* Assets.xcassets */,
 				717708902A092E020029D55F /* Property.swift */,
 				717708922A0934A20029D55F /* What_we_should_do.swift */,
+				718287092A1D5BC700A81EC6 /* UIViewExtension2.swift */,
+				717B94792A1D693000580067 /* CardView2.swift */,
+				717B947A2A1D693100580067 /* CardView2.xib */,
+				718286BF2A1D0AF400A81EC6 /* CardView.swift */,
+				718286C32A1D0BD800A81EC6 /* CardView.xib */,
 			);
 			path = FinalProject;
 			sourceTree = "<group>";
@@ -259,10 +274,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				71527E232A1B860D0074F4E3 /* MyTableViewCell.xib in Resources */,
-				717030992A1CF854005ADB7E /* GameViewController.xib in Resources */,
 				71CA86BC2A062C8A00C57F1E /* LaunchScreen.storyboard in Resources */,
+				718286C42A1D0BD800A81EC6 /* CardView.xib in Resources */,
+				717B94802A1D849300580067 /* Card.xib in Resources */,
 				71CA86B92A062C8A00C57F1E /* Assets.xcassets in Resources */,
 				71CA86B72A062C8200C57F1E /* Main.storyboard in Resources */,
+				717B947C2A1D693100580067 /* CardView2.xib in Resources */,
 				717030952A1CE2BD005ADB7E /* GameController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,13 +305,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				717B947B2A1D693100580067 /* CardView2.swift in Sources */,
+				7182870A2A1D5BC700A81EC6 /* UIViewExtension2.swift in Sources */,
 				71527E222A1B860D0074F4E3 /* MyTableViewCell.swift in Sources */,
+				718286C02A1D0AF400A81EC6 /* CardView.swift in Sources */,
 				717708932A0934A20029D55F /* What_we_should_do.swift in Sources */,
 				71CA86B42A062C8200C57F1E /* ViewController.swift in Sources */,
 				717030942A1CE2BD005ADB7E /* GameController.swift in Sources */,
+				717B947E2A1D847E00580067 /* Card.swift in Sources */,
 				71CA86B02A062C8200C57F1E /* AppDelegate.swift in Sources */,
 				717708912A092E020029D55F /* Property.swift in Sources */,
-				717030982A1CF854005ADB7E /* GameViewController.swift in Sources */,
 				71CA86B22A062C8200C57F1E /* SceneDelegate.swift in Sources */,
 				71527E292A1B9C610074F4E3 /* Model.swift in Sources */,
 			);

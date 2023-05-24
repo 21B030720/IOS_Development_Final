@@ -12,10 +12,12 @@ class ViewController: UIViewController, UITableViewDataSource {
     let data = ["First", "Second"]
     @IBOutlet weak var table: UITableView!
     var pointer: String = ""
-//    let userDefaults = UserDefaults()
     
     // Initializer
     override func viewDidLoad() {
+//        UserDefaults.standard.set([], forKey: "First")
+//        UserDefaults.standard.set([], forKey: "Second")
+        
         title = "List"
         super.viewDidLoad()
         table.register(MyTableViewCell.nib(), forCellReuseIdentifier: MyTableViewCell.identifier)

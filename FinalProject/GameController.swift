@@ -13,9 +13,10 @@ class GameController: UIViewController {
     @IBOutlet var thirdV: UIStackView!
     @IBOutlet var forthV: UIStackView!
     var listOfStacks: [UIStackView] = []
+    let emojis: [String] = ["😁", "🥶", "😈", "🤖"]
     let colors = [UIColor.black, UIColor.brown, UIColor.red, UIColor.blue]
     var spaces: [UIView] = []
-    var loadedData: [Int] = []
+    var loadedData: [[Int]] = []
     var pos: Int = 0
     var m: Int = 1
     override func viewDidLoad() {
@@ -25,17 +26,14 @@ class GameController: UIViewController {
     }
     
     
-    func load(loading: [Int]){
+    func load(loading: [[Int]]){
         loadedData = loading
     }
     func load2(){
         print(loadedData.count)
         for address in loadedData{
-            let viewDemo = UIView()
-//            viewDemo.frame = CGRect(x: 1, y: 1, width: 50, height: 200)
-            viewDemo.backgroundColor = colors[address]
-            viewDemo.layer.cornerRadius = 5;
-            viewDemo.layer.masksToBounds = true;
+            let viewDemo = CardView2(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+            viewDemo.configureView(id: address[0], id2: address[1])
             viewDemo.heightAnchor.constraint(equalToConstant: 100).isActive = true
             listOfStacks[pos].addArrangedSubview(viewDemo)
             pos += 1
@@ -54,20 +52,21 @@ class GameController: UIViewController {
             pos %= 4
         }
         pos = loadedData.count % 4
+
     }
     
     @IBAction func addView(_ sender: Any){
         // Create Object of View
-        let viewDemo = UIView()
-        let address = Int.random(in: 0..<4)
-//        viewDemo.frame = CGRect(x: 1, y: 1, width: 50, height: 200)
-        viewDemo.backgroundColor = colors[address]
-        viewDemo.layer.cornerRadius = 5;
-        viewDemo.layer.masksToBounds = true;
+        let address1 = Int.random(in: 0..<4)
+        let address2 = Int.random(in: 0..<4)
+        let viewDemo = Card(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        viewDemo.configureView(id: address1, id2: address2)
         viewDemo.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        addCard(name: title!, address: address)
         
         listOfStacks[pos].addArrangedSubview(viewDemo)
+        addCard(name: title!, colorId: address1, emojiId: address2)
+        
+        
         
         // Logic for Spaces in Stacks
         if(spaces.count != 0){

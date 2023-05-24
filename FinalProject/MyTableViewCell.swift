@@ -25,7 +25,6 @@ class MyTableViewCell: UITableViewCell{
     @IBOutlet var button: UIButton!
     
     @IBAction func didTapButton(){
-        
         delegate?.didTapButton(with: title)
     }
     
