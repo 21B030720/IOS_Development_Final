@@ -15,8 +15,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     // Initializer
     override func viewDidLoad() {
-//        UserDefaults.standard.set([], forKey: "First")
-//        UserDefaults.standard.set([], forKey: "Second")
+        UserDefaults.standard.set([], forKey: "First")
+        UserDefaults.standard.set([], forKey: "Second")
         
         title = "List"
         super.viewDidLoad()
