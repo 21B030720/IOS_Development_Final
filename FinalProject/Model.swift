@@ -9,9 +9,29 @@ import Foundation
 import UIKit
 
 
-var comparisonCards: [UIView] = []
-var allCards: [UIView] = []
+var comparisonCard: Card? = nil
+var allCards: [Card] = []
 func blockAllCards(){
+}
+func addToComparison(_ second: Card){
+    if(comparisonCard == nil){
+        comparisonCard = (second)
+    }
+    else{
+        if(comparisonCard!.getEmojiId() == second.getEmojiId()){
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                UIButton.animate(withDuration: 1, animations: { [] in
+                    comparisonCard?.removeFromSuperview()
+                    second.removeFromSuperview()
+                    comparisonCard = nil
+                })
+            })
+            
+        }
+        else{
+            comparisonCard = second
+        }
+    }
 }
 
 

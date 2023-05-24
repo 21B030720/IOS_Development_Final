@@ -20,6 +20,8 @@ class Card: UIView {
         super.init(frame: frame)
         
         configureView()
+        self.layer.cornerRadius = 10;
+        self.layer.masksToBounds = true;
         self.button?.backgroundColor = UIColor.green
         
     }
@@ -58,33 +60,40 @@ class Card: UIView {
         
         
     }
+    func getEmojiId()->Int{
+        return self.emojiId
+    }
+    func getColorId()->Int{
+        return self.colorId
+    }
+
     func generate(_ color: UIColor){
 //        self.button.backgroundColor = color
     }
     @IBAction func flip(_ sender: Any){
-//        if(comparisonCards.count == 0){
-//            comparisonCards.append(self.mainView)
-//        }
-//        else if(comparisonCards.count == 1){
-//            comparisonCards.append
-//        }
-//        if()
-        print("Flip")
-        if(isFlipside){
-            UIButton.animate(withDuration: 1, animations: { [self] in
-                self.button.titleLabel?.layer.opacity = 1.0
-            })
-        }
         
+        print("Flip")
+        UIButton.animate(withDuration: 1, animations: { [self] in
+            self.button.titleLabel?.layer.opacity = 1.0
+        })
+        
+        addToComparison(self)
         
         
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(4), execute: {
             UIButton.animate(withDuration: 1, animations: { [self] in
                 self.button.titleLabel?.layer.opacity = 0.0
                 self.button.setTitle(self.emojis[self.emojiId], for: .normal)
+                
+                comparisonCard = nil
             })
         })
         self.button.isUserInteractionEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+              self.button.isUserInteractionEnabled = true
+        }
+    }
+    func disableButton(){
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
               self.button.isUserInteractionEnabled = true
         }

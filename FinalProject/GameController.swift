@@ -45,8 +45,6 @@ class GameController: UIViewController {
         while(pos != 0){
             let space = UIView()
             space.backgroundColor = UIColor.white
-            space.layer.cornerRadius = 5;
-            space.layer.masksToBounds = true;
             space.heightAnchor.constraint(equalToConstant: 100).isActive = true
 
             listOfStacks[pos].addArrangedSubview(space)
@@ -59,6 +57,7 @@ class GameController: UIViewController {
     }
     
     @IBAction func addView(_ sender: Any){
+        
         // Create Object of View
         let address1 = Int.random(in: 0..<4)
         let address2 = Int.random(in: 0..<4)
