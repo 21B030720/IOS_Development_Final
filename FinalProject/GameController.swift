@@ -19,6 +19,7 @@ class GameController: UIViewController {
     var loadedData: [[Int]] = []
     var pos: Int = 0
     var m: Int = 1
+    // Init
     override func viewDidLoad() {
         super.viewDidLoad()
         allCards = []

@@ -45,9 +45,11 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.delegate = self
         return cell
     }
+    
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             table.beginUpdates()
@@ -56,6 +58,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             table.endUpdates()
         }
     }
+    
     @IBAction func editMode(_ sender: Any){
         table.setEditing(!table.isEditing, animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
